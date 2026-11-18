@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Bezalel">
+  <title>Bezalel</title>
+  <rect width="180" height="180" rx="28" fill="#6F4A2E"/>
+  <g transform="translate(26,42)">
+    <path d="M63 6Q92 48 126 93L5 91Q38 52 63 6Z" fill="#241810"/>
+    <path d="M57 26Q80 58 103 94L19 92Q41 62 57 26Z" fill="#D6A97C"/>
+    <path d="M60 62Q69 77 73 93L52 93Q55 77 60 62Z" fill="#6F4A2E"/>
+  </g>
+</svg>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bezalel · Soluções de software</title>
+<meta name="description" content="A Bezalel desenvolve soluções de software sob medida e mantém produtos próprios, como o Braggo.">
+<meta name="theme-color" content="#241810">
+<link rel="canonical" href="https://DOMINIO/">
+<link rel="icon" href="logo/bezalel-icone.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Bezalel">
+<meta property="og:title" content="Bezalel · Soluções de software">
+<meta property="og:description" content="Soluções de software sob medida e produtos próprios.">
+<meta property="og:url" content="https://DOMINIO/">
+<meta property="og:image" content="https://DOMINIO/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://DOMINIO/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Bezalel","url":"https://DOMINIO/","logo":"https://DOMINIO/logo/bezalel-icone.svg","sameAs":["https://github.com/jhonvss1"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Young+Serif&display=swap">
+<style>
+/* Identidade: papel recortado. Hero em marrom-noite, leitura em papel kraft (marrom-noite no tema escuro). Cores vêm da logo. */
+:root {
+  --night: #241810;
+  --clay: #6F4A2E;
+  --sand: #D6A97C;
+  --kraft: #E4D3B5;
+  --hero-bg: var(--night);
+  --hero-fg: var(--kraft);
+  --hero-soft: #C9B49A;
+  --bg: var(--kraft);
+  --surface: #D9C5A1;
+  --fg: #241810;
+  --muted: #5E4632;
+  --line: #BFA47C;
+  --accent: #6F4A2E;
+  --font-display: 'Young Serif', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #241810;
+    --surface: #2E1F15;
+    --fg: #E4D3B5;
+    --muted: #C9B49A;
+    --line: #4A3322;
+    --accent: #D6A97C;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #241810;
+  --surface: #2E1F15;
+  --fg: #E4D3B5;
+  --muted: #C9B49A;
+  --line: #4A3322;
+  --accent: #D6A97C;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-wrap: balance;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* hero */
+.hero { background: var(--hero-bg); color: var(--hero-fg); }
+.hero .wrap { padding-block: 22px 40px; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-family: var(--font-display); font-size: 1.7rem; }
+.logo svg { width: 44px; height: auto; display: block; }
+.logo span { display: inline-block; transform: rotate(-1.5deg); }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; font-size: 1rem; }
+.nav ul a { text-decoration: none; color: var(--hero-soft); transition: color .2s; }
+.nav ul a:hover { color: var(--hero-fg); text-decoration: underline wavy var(--sand); text-underline-offset: 6px; }
+.hero-body { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: center; gap: clamp(24px, 5vw, 64px); padding-top: clamp(40px, 8vw, 88px); }
+.hero h1 { font-size: clamp(2.7rem, 7.4vw, 5.4rem); line-height: 1.02; }
+.hero p { margin: 26px 0 0; max-width: 34rem; font-size: 1.2rem; color: var(--hero-soft); }
+.actions { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 38px; }
+.btn { display: inline-block; text-decoration: none; font-weight: 700; font-size: 1rem; padding: 12px 22px; border: 2px solid var(--hero-fg); transition: transform .15s, box-shadow .15s; }
+.btn.solid { background: var(--kraft); color: var(--night); box-shadow: 4px 4px 0 var(--clay); transform: rotate(-1deg); }
+.btn.solid:hover { transform: rotate(-1deg) translate(2px, 2px); box-shadow: 2px 2px 0 var(--clay); }
+.btn.line { color: var(--hero-fg); border-color: var(--sand); transform: rotate(0.8deg); }
+.btn.line:hover { background: var(--clay); }
+.art { justify-self: center; width: 100%; max-width: 340px; transform: rotate(2deg); }
+.art svg { display: block; width: 100%; height: auto; }
+
+.edge { display: block; width: 100%; height: 30px; margin-top: -1px; background: var(--hero-bg); }
+.edge path { fill: var(--bg); }
+
+/* sections */
+section { padding-block: clamp(56px, 8vw, 104px); }
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 88px); }
+.split h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); }
+.lead { margin: 0 0 32px; font-size: 1.2rem; max-width: 36rem; }
+.eyebrow { font-size: 1rem; color: var(--accent); font-weight: 700; margin: 0 0 14px; }
+.eyebrow::before { content: "— "; }
+
+.rows { margin: 0; padding: 0; list-style: none; border-top: 2px dashed var(--line); }
+.rows li { display: grid; grid-template-columns: minmax(0, 10rem) minmax(0, 1fr); gap: 8px 24px; padding: 22px 0; border-bottom: 2px dashed var(--line); }
+.rows h3 { font-size: 1.4rem; }
+.rows p { margin: 0; color: var(--muted); }
+.rows a { color: var(--accent); font-weight: 700; text-underline-offset: 4px; }
+
+.contact { background: var(--surface); }
+.contact a.big { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2.3rem); text-decoration: underline wavy var(--sand); text-underline-offset: 8px; text-decoration-thickness: 2px; overflow-wrap: anywhere; }
+.contact a.big:hover { text-decoration-color: var(--accent); }
+.contact .links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; font-size: 1rem; font-weight: 500; }
+
+footer { background: var(--hero-bg); color: var(--hero-soft); padding-block: 28px; font-size: 0.95rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .split, .hero-body { grid-template-columns: minmax(0, 1fr); }
+  .art { max-width: 220px; justify-self: start; }
+  .rows li { grid-template-columns: minmax(0, 1fr); }
+  .nav ul { gap: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a class="logo" href="#" aria-label="Bezalel, início">
+        <svg viewBox="-8 -10 144 114" aria-hidden="true"><path d="M63 6Q92 48 126 93L5 91Q38 52 63 6Z" fill="#6F4A2E"/><path d="M57 26Q80 58 103 94L19 92Q41 62 57 26Z" fill="#D6A97C"/><path d="M60 62Q69 77 73 93L52 93Q55 77 60 62Z" fill="#241810"/><path d="M62 7L60 -9" stroke="#E4D3B5" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
+        <span>Bezalel</span>
+      </a>
+      <ul>
+        <li><a href="#fazemos">O que fazemos</a></li>
+        <li><a href="#nome">O nome</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://github.com/jhonvss1" target="_blank" rel="noopener">GitHub ↗</a></li>
+      </ul>
+    </nav>
+    <div class="hero-body">
+      <div>
+        <h1>Software que resolve problemas reais.</h1>
+        <p>A Bezalel desenvolve soluções de software sob medida e mantém produtos próprios, como o Braggo.</p>
+        <div class="actions">
+          <a class="btn solid" href="#fazemos">Ver o que fazemos</a>
+          <a class="btn line" href="#contato">Contato</a>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="-12 -16 152 132"><path d="M63 6Q92 48 126 93L5 91Q38 52 63 6Z" fill="#6F4A2E"/><path d="M57 26Q80 58 103 94L19 92Q41 62 57 26Z" fill="#D6A97C"/><path d="M60 62Q69 77 73 93L52 93Q55 77 60 62Z" fill="#241810"/><path d="M62 7L60 -9" stroke="#E4D3B5" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M-6 97Q30 92 70 96T136 95L134 101Q90 99 40 102T-4 102Z" fill="#D6A97C"/></svg>
+      </div>
+    </div>
+  </div>
+</header>
+<svg class="edge" viewBox="0 0 1200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30L0 12Q40 3 90 11T200 9T310 13T420 5T530 11T640 7T760 13T880 4T1000 10T1100 6L1200 11L1200 30Z"/></svg>
+
+<main>
+  <section id="fazemos">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">O que fazemos</p>
+        <h2>Do desenho ao código em produção.</h2>
+      </div>
+      <div>
+        <p class="lead">Fazemos soluções sob medida para quem precisa de um sistema que funcione no dia a dia, e mantemos produtos próprios que evoluem com os clientes que os usam.</p>
+        <ul class="rows">
+          <li>
+            <h3>Sob medida</h3>
+            <p>Sistemas desenhados para o processo de cada negócio, com acompanhamento depois da entrega.</p>
+          </li>
+          <li>
+            <h3>Braggo</h3>
+            <p>Agenda, clientes, assinaturas e finanças para barbearias. Produto em uso, com clientes reais.<br><a href="https://braggo.com.br" target="_blank" rel="noopener">braggo.com.br ↗</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="nome">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">O nome e a tenda</p>
+        <h2>Quem constrói com as próprias mãos.</h2>
+      </div>
+      <div>
+        <p class="lead">Bezalel é o artesão que construiu o Tabernáculo, a tenda do deserto (Êxodo 31). O nome quer dizer “à sombra de Deus”.</p>
+        <p>É o que buscamos no software: feito com ofício, em camadas bem assentadas e com a porta aberta para quem vai usar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos conversar.</h2>
+      </div>
+      <div>
+        <p class="lead">Se você tem um problema para resolver, escreva para a gente.</p>
+        <a class="big" href="mailto:jvstech20@gmail.com">jvstech20@gmail.com</a>
+        <div class="links"><a href="https://github.com/jhonvss1" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/jhon-santos-vs1/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Bezalel · © 2026</span>
+    <span>Software feito com cuidado.</span>
+  </div>
+</footer>
+</body>
+</html>
